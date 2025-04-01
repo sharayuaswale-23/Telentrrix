@@ -153,7 +153,7 @@ const Advantage = () => {
           that can truly make a difference.
         </p>
 
-        <button className="bg-blue-800 text-white px-6 py-2 rounded font-bold">
+        <button className="bg-blue-800 text-white rounded-full px-4 py-2 font-bold">
           {" "}
           
           Know More

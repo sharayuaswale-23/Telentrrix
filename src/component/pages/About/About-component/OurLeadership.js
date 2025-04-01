@@ -1,93 +1,71 @@
-import React from "react";
-import mission from "../../../../assets/our-mission-about.png";
-import vission from "../../../../assets/Our-Vision-about.png";
-import goal from "../../../../assets/Our-Purpose-about.png";
+import Ranjni from "../../../../assets/Ranjini-About-us.png";
+import Ajay from "../../../../assets/ajay-about-us.png";
 
-const OurCards = () => {
+const OurLeadership = () => {
   return (
-    <div className="container mx-auto px-4 py-12">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-      
-        <div className="flex flex-col items-center">
-          <h2 className="text-2xl font-semibold text-blue-800 mb-2">
-            Our Mission
-          </h2>
-          <div className="w-16 h-1 bg-orange-400 mb-6"></div>
+    <div>
+   
+      <div className="bg-blue-900 flex justify-center items-center p-8">
+        <h3 className="text-white text-2xl font-semibold">
+          Our <span className="border-b-4 border-orange-500">Leaders</span>hip
+        </h3>
+      </div>
 
-          <div className="w-full mb-4">
-            <div className="overflow-hidden relative">
-              <img
-                src={mission}
-                alt="Our Mission"
-                className="w-full object-cover"
-              />
-            </div>
-          </div>
-
-          <div className="text-center px-4">
-            <p className="text-sm font-semibold">
-              To be the ecosystem connecting people, technology, and
-              opportunities through applied human intelligence.
-            </p>
-          </div>
-          <div className="w-full h-1 bg-orange-400 mt-6"></div>
-        </div>
-
-      
-        <div className="flex flex-col items-center">
-          <h2 className="text-2xl font-semibold text-blue-800 mb-2">
-            Our Vision
-          </h2>
-          <div className="w-16 h-1 bg-orange-400 mb-6"></div>
-
-          <div className="relative w-full mb-4">
-            <div className="overflow-hidden relative">
-              <img
-                src={vission}
-                alt="Our Vision"
-                className="w-full object-cover"
-              />
-            </div>
-          </div>
-
-          <div className="text-center px-4">
-            <p className="text-sm font-semibold">
-              Transforming our world by empowering global businesses through
-              applied human intelligence.
-            </p>
-          </div>
-          <div className="w-full h-1 bg-orange-400 mt-6"></div>
-        </div>
-
+   
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center text-center">
      
-        <div className="flex flex-col items-center">
-          <h2 className="text-2xl font-semibold text-blue-800 mb-2">
-            Our Purpose
-          </h2>
-          <div className="w-16 h-1 bg-orange-400 mb-6"></div>
-
-          <div className="relative w-full mb-4">
-            <div className=" overflow-hidden relative">
+          <div className="flex flex-col items-center">
+            <div className="relative w-64 h-64">
               <img
-                src={goal}
-                alt="Our Purpose"
-                className="w-full object-cover"
+                src={Ranjni}
+                alt="Ranjini Poddar"
+                className="w-full h-full"
               />
-              <div className="absolute bottom-0 w-full"></div>
             </div>
+            <h3 className="text-2xl font-semibold text-blue-800 mt-4">
+              Ranjini Poddar
+            </h3>
+            <p className="font-semibold text-sm">CEO & Co-Founder</p>
+            <p className="font-semibold text-xs mt-4 px-4 max-w-sm">
+              CEO and Founder of Artech, America’s largest women-owned IT
+              staffing company, Ranjini Poddar is used to rewriting the rules,
+              not only on gender expectations in the IT sector but on
+              innovation...
+            </p>
+            <button className="bg-blue-800 w-6/12 text-white px-6 py-1 rounded-full mt-4 hover:bg-blue-900 transition duration-300">
+              Read More
+            </button>
+
+            <div className="border-b-[6px] border-blue-900 w-full mt-6"></div>
           </div>
 
-          <div className="text-center px-4">
-            <p className="text-sm font-semibold">
-              We empower businesses not just the right solutions and
-              opportunities, but human intellect which makes THE difference.
+    
+          <div className="flex flex-col items-center">
+            <div className="relative w-64 h-64">
+              <img src={Ajay} alt="Ajay Poddar" className="w-full h-full" />
+            </div>
+            <h3 className="text-2xl font-bold text-blue-800 mt-4">
+              Ajay Poddar
+            </h3>
+            <p className="font-semibold text-sm">
+              Co-Founder & Executive Vice President
             </p>
+            <p className="font-semibold text-xs mt-4 px-4 max-w-sm">
+              Co-Founder and Executive Vice President at Artech, Ajay possesses
+              a B.S., M.S., in Computer Engineering and Finance Science and an
+              MBA in Finance from the Stern School of Business (NYU)...
+            </p>
+            <button className="bg-blue-800 w-6/12 text-white px-6 py-1 rounded-full mt-4 hover:bg-blue-900 transition duration-300">
+              Read More
+            </button>
+
+            <div className="border-b-[6px] border-blue-900 w-full mt-6"></div>
           </div>
-          <div className="w-full h-1 bg-orange-400 mt-6"></div>
         </div>
       </div>
     </div>
   );
 };
 
-export default OurCards;
+export default OurLeadership;
