@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from './component/pages/Home/Home';
-import Community from './component/pages/Community/main';
-import Contactmain from './component/pages/Contact/main';
+import Community from './component/pages/Community/Community';
+import Contactmain from './component/pages/Contact/Contact';
 import Careers from './component/pages/Careers/career';
 import OurSolution from './component/pages/solution/solution';
 import Header from './component/common/Header';

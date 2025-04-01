@@ -7,14 +7,14 @@ const InnovativeSolution = () => {
       <div className="w-24 sm:w-36 h-1 bg-[#fba91e] mx-auto my-2"></div>
       <p className="text-gray-600 text-sm sm:text-lg">Enhance Your Business with Artech</p>
 
-      {/* Header Section */}
+     
       <div className="bg-blue-900 text-white py-6 mt-6 sm:mt-8 w-full">
         <h3 className="text-lg sm:text-xl font-semibold">
           Expertise Across Professional Verticals
         </h3>
       </div>
 
-      {/* Categories Grid */}
+  
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-left max-w-6xl mx-auto mt-6 sm:mt-8 text-[13px] sm:text-[14px] font-semibold text-gray-800 px-4">
         <ul className="space-y-2">
           <li>◦ IT</li>

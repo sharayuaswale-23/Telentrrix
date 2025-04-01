@@ -1,51 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Img1 from "../../../../assets/s1.png";
 import Img2 from "../../../../assets/s2.png";
 import Img3 from "../../../../assets/s3.png";
 import Img4 from "../../../../assets/s4.png";
 import Img5 from "../../../../assets/s5.png";
-
-const features = [
-  {
-    image: Img1,
-    title: "CONSULTATIVE PARTNER",
-    description:
-      "ASA Board, WBENC Board, Frequent Speaker at SIA Forums and Conferences, Federal Reserve Small and Medium Sized Advisory Board Member",
-    color: "text-red-500",
-  },
-  {
-    image: Img2,
-    title: "MATURE OPERATIONS PROCESS CONTROLS",
-    description:
-      "Daily/Weekly Productivity Reporting, MRMs, Bi-weekly Business Review meetings, Monthly Market Review, QBR’s, Recruitment and Sales Training Academy",
-    color: "text-teal-500",
-  },
-  {
-    image: Img3,
-    title: "FINANCIAL STABILITY",
-    description:
-      "Financial strength and stability; scalable, flexible, privately held and willing to invest",
-    color: "text-yellow-500",
-  },
-  {
-    image: Img4,
-    title: "STATE OF THE ART TECHNOLOGY INFRASTRUCTURE INVESTMENTS",
-    description:
-      "Innovative technology infrastructure and operational backbone",
-    color: "text-purple-500",
-  },
-  {
-    image: Img5,
-    title: "NATIONAL AND GLOBAL GEOGRAPHIC PRESENCE",
-    description:
-      "Financial strength and stability; scalable, flexible, privately held and willing to invest",
-    color: "text-blue-500",
-  },
-];
+import ContactModal from "../../../common/Modal";
 
 const PreferredChoice = () => {
+   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
-    <div className="py-10">
+   <>
+     <div className="py-10">
       <div className="bg-blue-900 py-6 text-center">
         <h2 className="text-white text-[24px] sm:text-[28px] font-semibold">
           Preferred Choice for Clients
@@ -55,37 +20,117 @@ const PreferredChoice = () => {
 
       <div className="flex justify-center">
         <div className="w-[90%] sm:w-[80%]">
-          <div className="flex flex-wrap justify-start gap-10 px-4 sm:px-10 mt-12 mb-12">
-            {features.map((feature, index) => (
-              <div key={index} className="flex items-start justify-start space-x-4 max-w-lg">
-                <img
-                  src={feature.image}
-                  alt={feature.title}
-                  className="w-[70px] h-[70px] sm:w-[80px] sm:h-[80px] object-contain"
-                />
-                <div>
-                  <h3 className={`text-md font-semibold ${feature.color}`}>
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-700 text-[14px] sm:text-md font-bold mt-3">
-                    {feature.description}
-                  </p>
-                </div>
+       
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 px-4 sm:px-10 mt-12 mb-12">
+        
+            <div className="flex items-start space-x-4 max-w-lg">
+              <img
+                src={Img1}
+                alt="CONSULTATIVE PARTNER"
+                className="w-[70px] h-[70px] sm:w-[80px] sm:h-[80px] object-contain"
+              />
+              <div>
+                <h3 className="text-md font-semibold text-red-500">
+                  CONSULTATIVE PARTNER
+                </h3>
+                <p className="text-gray-700 text-[14px] sm:text-md font-bold mt-3">
+                  ASA Board, WBENC Board, Frequent Speaker at SIA Forums and
+                  Conferences, Federal Reserve Small and Medium Sized Advisory
+                  Board Member
+                </p>
               </div>
-            ))}
-          </div>
+            </div>
 
-          <div className="mt-6 text-center">
+        
+            <div className="flex items-start space-x-4 max-w-lg">
+              <img
+                src={Img2}
+                alt="MATURE OPERATIONS PROCESS CONTROLS"
+                className="w-[70px] h-[70px] sm:w-[80px] sm:h-[80px] object-contain"
+              />
+              <div>
+                <h3 className="text-md font-semibold text-teal-500">
+                  MATURE OPERATIONS PROCESS CONTROLS
+                </h3>
+                <p className="text-gray-700 text-[14px] sm:text-md font-bold mt-3">
+                  Daily/Weekly Productivity Reporting, MRMs, Bi-weekly Business
+                  Review meetings, Monthly Market Review, QBR’s, Recruitment and
+                  Sales Training Academy
+                </p>
+              </div>
+            </div>
+
+          
+            <div className="flex items-start space-x-4 max-w-lg">
+              <img
+                src={Img3}
+                alt="FINANCIAL STABILITY"
+                className="w-[70px] h-[70px] sm:w-[80px] sm:h-[80px] object-contain"
+              />
+              <div>
+                <h3 className="text-md font-semibold text-yellow-500">
+                  FINANCIAL STABILITY
+                </h3>
+                <p className="text-gray-700 text-[14px] sm:text-md font-bold mt-3">
+                  Financial strength and stability; scalable, flexible,
+                  privately held and willing to invest
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-4 max-w-lg">
+              <img
+                src={Img4}
+                alt="STATE OF THE ART TECHNOLOGY INFRASTRUCTURE INVESTMENTS"
+                className="w-[70px] h-[70px] sm:w-[80px] sm:h-[80px] object-contain"
+              />
+              <div>
+                <h3 className="text-md font-semibold text-purple-500">
+                  STATE OF THE ART TECHNOLOGY INFRASTRUCTURE INVESTMENTS
+                </h3>
+                <p className="text-gray-700 text-[14px] sm:text-md font-bold mt-3">
+                  Innovative technology infrastructure and operational backbone
+                </p>
+              </div>
+            </div>
+
+         
+            <div className="flex items-start space-x-4 max-w-lg">
+              <img
+                src={Img5}
+                alt="NATIONAL AND GLOBAL GEOGRAPHIC PRESENCE"
+                className="w-[70px] h-[70px] sm:w-[80px] sm:h-[80px] object-contain"
+              />
+              <div>
+                <h3 className="text-md font-semibold text-blue-500">
+                  NATIONAL AND GLOBAL GEOGRAPHIC PRESENCE
+                </h3>
+                <p className="text-gray-700 text-[14px] sm:text-md font-bold mt-3">
+                  Financial strength and stability; scalable, flexible,
+                  privately held and willing to invest
+                </p>
+              </div>
+            </div>
+            <div className="mt-6 text-center">
             <p className="font-semibold text-md sm:text-lg">
               To find out how we can help you
             </p>
-            <button className="mt-3 bg-blue-900 text-white px-6 py-2 rounded-full text-[14px] sm:text-[15px] border border-blue-900 font-semibold hover:bg-white hover:text-blue-900 transition">
+            <button onClick={() => setIsModalOpen(true)}
+            className="mt-3 bg-blue-900 text-white px-6 py-2 rounded-full text-[14px] sm:text-[15px] border border-blue-900 font-semibold hover:bg-white hover:text-blue-900 transition">
               CONTACT US TODAY!
             </button>
           </div>
+          
+          </div>
+
         </div>
       </div>
     </div>
+    <ContactModal
+                    isOpen={isModalOpen}
+                    onClose={() => setIsModalOpen(false)}
+                />
+   </>
   );
 };
 

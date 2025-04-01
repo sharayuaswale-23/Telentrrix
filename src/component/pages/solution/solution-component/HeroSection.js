@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ContactModal from "../../../common/Modal"
 import Banner from '../../../../assets/Our-solutions-banner-1.png';
 
 const HeroSection = () => {
+ const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
-    <div
-      className="flex mt-24 flex-col items-end justify-center text-center p-5 bg-cover bg-right lg:bg-center h-auto lg:h-[451px]"
+   <>
+     <div
+      className="flex mt-12 md:mt-20 lg:mt-24 flex-col items-end justify-center text-center p-5 bg-cover bg-right lg:bg-center h-auto lg:h-[451px]"
       style={{ backgroundImage: `url(${Banner})` }}
     >
       <div className="bg-transparent bg-opacity-90 p-5 md:p-10 ">
@@ -17,11 +21,17 @@ const HeroSection = () => {
           <p>Flexible Engagement Models</p>
         </div>
         <p className="mt-6 text-white text-lg">To find out how we can help you</p>
-        <button className="mt-4 bg-white text-blue-900 font-semibold py-3 px-6 rounded-full text-lg shadow-md hover:bg-gray-200">
+        <button  onClick={() => setIsModalOpen(true)}
+        className="mt-4 bg-white text-blue-900 font-semibold py-1 px-4 rounded-full text-lg shadow-md hover:bg-gray-200">
           CONTACT US TODAY!
         </button>
       </div>
     </div>
+    <ContactModal
+                    isOpen={isModalOpen}
+                    onClose={() => setIsModalOpen(false)}
+                />
+   </>
   );
 };
 

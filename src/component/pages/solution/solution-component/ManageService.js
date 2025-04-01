@@ -1,19 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import sideImg from "../../../../assets/mgsv.png";
+import ContactModal from "../../../common/Modal";
 
 const ManageService = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
-    <div className="bg-blue-900 text-white py-16 w-full flex justify-center">
+   <>
+     <div className="bg-blue-900 text-white py-16 w-full flex justify-center">
       <div className="w-[90%] sm:w-[85%] lg:w-[80%] flex flex-col lg:flex-row items-center lg:items-start gap-10">
         
-        {/* Image Section */}
+      
         <div className="w-full lg:w-1/2 flex justify-center">
           <div className="w-[90%] sm:w-[80%] lg:w-full">
             <img src={sideImg} alt="Managed Services" className="w-full" />
           </div>
         </div>
 
-        {/* Text Content */}
+      
         <div className="w-full lg:w-1/2 text-center lg:text-left">
           <h2 className="text-yellow-400 text-2xl sm:text-3xl font-bold">
             Managed Services and Project Delivery
@@ -38,15 +41,21 @@ const ManageService = () => {
             most powerful staffing engine.
           </p>
 
-          {/* Button */}
+        
           <div className="mt-6 flex justify-center lg:justify-start">
-            <button className="mt-3 bg-white text-blue-900 px-6 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-[15px] font-semibold border hover:bg-blue-900 hover:text-white transition">
+            <button onClick={() => setIsModalOpen(true)}
+            className="mt-3 bg-white text-blue-900 px-6 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-[15px] font-semibold border hover:bg-blue-900 hover:text-white transition">
               CONTACT US TODAY!
             </button>
           </div>
         </div>
       </div>
     </div>
+    <ContactModal
+                    isOpen={isModalOpen}
+                    onClose={() => setIsModalOpen(false)}
+                />
+   </>
   );
 };
 

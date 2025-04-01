@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom"; 
 import { FiChevronDown, FiSearch, FiX, FiMenu } from "react-icons/fi";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaLinkedin, FaFacebookF, FaXTwitter, FaInstagram } from "react-icons/fa6";
 import logo from "../../assets/headerlogo.png";
 
 const Header = () => {
@@ -56,7 +56,7 @@ const Header = () => {
           <img src={logo} alt="Artech Logo" className="h-full" />
         </div>
 
-        <nav className="hidden lg:flex space-x-6 items-center">
+        <nav className="hidden lg:flex space-x-4 items-center">
           <a href="/"  className={` ${
               currentPath === "/" ?"bg-blue-700 text-white px-4 py-2 rounded-full" 
                  : "hover:bg-blue-700 hover:text-white hover:px-4 hover:py-2 hover:rounded-full"
@@ -183,8 +183,9 @@ const Header = () => {
           </a>
 
           <FiSearch className="text-gray-600 text-lg cursor-pointer" />
-          <FaLinkedinIn className="text-blue-700 text-lg" />
+          <FaLinkedin className="text-blue-700 text-lg" />
           <FaFacebookF className="text-blue-700 text-lg" />
+          <FaXTwitter className="text-blue-700 text-lg"/>
           <FaInstagram className="text-blue-700 text-lg" />
         </nav>
 
@@ -233,12 +234,14 @@ const Header = () => {
             </div>
 
             <div className="border-b border-gray-600 py-3">
-              <button
+             <a href="/about">
+             <button
                 onClick={() => toggleDropdown("about")}
                 className="text-lg flex justify-between w-full text-left"
               >
                 About Us <FiChevronDown />
               </button>
+             </a>
               {dropdowns.about && (
                 <div className="pl-4 mt-2">
                   <a href="#" className="block border-b border-gray-700 py-2">
@@ -258,12 +261,14 @@ const Header = () => {
             </div>
 
             <div className="border-b border-gray-600 py-3">
-              <button
+             <a href="/solution">
+             <button
                 onClick={() => toggleDropdown("solutions")}
                 className="text-lg flex justify-between w-full text-left"
               >
                 Our Solutions <FiChevronDown />
               </button>
+             </a>
               {dropdowns.solutions && (
                 <div className="pl-4 mt-2">
                   <a href="#" className="block border-b border-gray-700 py-2">
@@ -280,12 +285,14 @@ const Header = () => {
             </div>
 
             <div className="border-b border-gray-600 py-3">
-              <button
+            <a href="/careers">
+            <button
                 onClick={() => toggleDropdown("careers")}
                 className="text-lg flex justify-between w-full text-left"
               >
                 Careers <FiChevronDown />
               </button>
+            </a>
               {dropdowns.careers && (
                 <div className="pl-4 mt-2">
                   <a href="#" className="block border-b border-gray-700 py-2">
@@ -304,12 +311,12 @@ const Header = () => {
               </a>
             </div>
             <div className="border-b border-gray-600 py-3">
-              <a href="#" className="text-lg flex justify-between">
+              <a href="/" className="text-lg flex justify-between">
                 Resources
               </a>
             </div>
             <div className="border-b border-gray-600 py-3">
-              <a href="#" className="text-lg flex justify-between">
+              <a href="/contact" className="text-lg flex justify-between">
                 Contact Us
               </a>
             </div>

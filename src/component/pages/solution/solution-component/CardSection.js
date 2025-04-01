@@ -43,7 +43,7 @@ const CardSection = () => {
               <h3 className="text-lg font-semibold text-[#4300ff] mt-4">
                 {card.title}
               </h3>
-              <button className="mt-4 mb-4 bg-blue-900 text-white px-7 py-2 rounded-4xl text-[10px] font-medium hover:text-blue-800 border hover:border-blue-900 hover:bg-white transition">
+              <button className="mt-4 py-1 px-4 rounded-full text-lg  mb-4 bg-blue-900 text-white rounded-4xl text-[10px] font-medium hover:text-blue-800 border hover:border-blue-900 hover:bg-white transition">
                 Read More
               </button>
             </div>
@@ -53,7 +53,7 @@ const CardSection = () => {
             <p className="font-semibold text-lg">
               To find out how we can help you
             </p>
-            <button className="mt-3 bg-blue-900 text-white px-[35px] py-[10px] rounded-4xl text-[15px] border font-semibold hover:bg-white hover:text-blue-900 transition">
+            <button className="mt-3 py-1 px-4 rounded-full text-lg bg-blue-900 text-white rounded-4xl text-[15px] border font-semibold hover:bg-white hover:text-blue-900 transition">
               CONTACT US TODAY!
             </button>
           </div>

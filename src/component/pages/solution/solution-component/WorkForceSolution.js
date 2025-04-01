@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Sideimg from "../../../../assets/workforce.png";
+import ContactModal from "../../../common/Modal";
 
 const WorkForceSolution = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
-    <div className="bg-[#fba91e] py-16 px-6 w-full flex justify-center">
+<>
+<div className="bg-[#fba91e] py-16 px-6 w-full flex justify-center">
       <div className="max-w-6xl flex flex-col md:flex-row items-start justify-between">
         <div className="max-w-2xl text-left text-black">
           <h2 className="text-3xl font-bold text-blue-900">
@@ -39,7 +43,8 @@ const WorkForceSolution = () => {
             <p className="font-semibold text-lg">
               To find out how we can help you
             </p>
-            <button className="mt-3 bg-blue-900 text-white px-[35px] py-[10px] rounded-4xl text-[15px] border font-semibold hover:bg-white hover:text-blue-900 transition">
+            <button onClick={() => setIsModalOpen(true)}
+            className="mt-3 py-1 px-4 rounded-full text-lg bg-blue-900 text-white rounded-4xl text-[15px] border font-semibold hover:bg-white hover:text-blue-900 transition">
               CONTACT US TODAY!
             </button>
           </div>
@@ -51,6 +56,11 @@ const WorkForceSolution = () => {
       </div>
       </div>
     </div>
+    <ContactModal
+                    isOpen={isModalOpen}
+                    onClose={() => setIsModalOpen(false)}
+                />
+</>
   );
 };
 

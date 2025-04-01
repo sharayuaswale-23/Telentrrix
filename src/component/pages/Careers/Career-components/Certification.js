@@ -6,7 +6,7 @@ const Certification = () => {
   return (
     <div className="bg-blue-900 text-white py-10 px-4 md:px-16">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        {/* Left Side */}
+      
         <div>
           <img src={CertifiedImg} alt="Great Place to Work Certification" className="w-40 relative top-[-45px]" />
           <h2 className="text-2xl md:text-3xl font-semibold mb-2">
@@ -30,7 +30,7 @@ const Certification = () => {
           </p>
         </div>
 
-        {/* Right Side */}
+     
         <div className="">
           <img src={ArtechRightImg} alt="Team Collaboration" className="" />
         </div>

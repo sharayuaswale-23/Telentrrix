@@ -6,7 +6,7 @@ const Footer = () => {
     <>
     <footer className="bg-black/90 text-white py-10 px-6 md:px-16 lg:px-32 flex-col justify-between">
       
-      {/* Footer Links */}
+     
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
         <div>
           <h3 className="font-medium mb-6 text-[18px]">OUR SOLUTIONS</h3>
@@ -53,9 +53,9 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Contact & Socials */}
+  
       <div className="mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-6">
-        {/* Contact Section */}
+     
         <div className="flex flex-col md:flex-row md:items-center gap-6">
           <h1 className="text-lg md:text-2xl font-medium text-center md:text-left">
             CONTACT US
@@ -76,7 +76,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Social Media Section */}
         <div className="flex flex-col md:flex-row items-center gap-6">
           <h1 className="text-lg md:text-xl font-medium">FOLLOW US</h1>
           <div className="flex space-x-4">
@@ -88,7 +87,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Copyright */}
+  
       
     </footer>
     <div className="bg-[#1f1f1f] text-center text-sm text-white w-full flex justify-around py-5">

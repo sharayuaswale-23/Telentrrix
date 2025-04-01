@@ -30,7 +30,7 @@ const Pace = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-3 px-3 md:px-6 mt-8">
-            {/* Perform */}
+       
             <div className="bg-[#ed4a42] text-white py-12 px-3 text-center flex-col justify-center items-center rounded-lg">
               <h3 className="text-xl font-semibold">Perform</h3>
               <div className="flex w-full justify-center">
@@ -43,7 +43,7 @@ const Pace = () => {
               </p>
             </div>
 
-            {/* Accelerate */}
+         
             <div className="bg-[#05b6b2] text-white py-12 px-3 text-center flex-col justify-center items-center rounded-lg">
               <h3 className="text-xl font-semibold">Accelerate</h3>
               <div className="flex w-full justify-center">
@@ -56,7 +56,7 @@ const Pace = () => {
               </p>
             </div>
 
-            {/* Connect */}
+       
             <div className="bg-[#253e91] text-white py-12 px-3 text-center flex-col justify-center items-center rounded-lg">
               <h3 className="text-xl font-semibold">Connect</h3>
               <div className="flex w-full justify-center">
@@ -70,7 +70,7 @@ const Pace = () => {
               </p>
             </div>
 
-            {/* Educate */}
+        
             <div className="bg-[#6c348d] text-white py-12 px-3 text-center flex-col justify-center items-center rounded-lg">
               <h3 className="text-xl font-semibold">Educate</h3>
               <div className="flex w-full justify-center">

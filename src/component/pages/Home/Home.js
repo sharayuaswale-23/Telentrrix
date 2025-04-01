@@ -1,8 +1,23 @@
 import React from 'react'
-import CarouselSection from './Carousel'
+import HeroSec from './Home-component/HeroSec'
+import CountriesComponent from './Home-component/CountriesComponent'
+import AchievementComponent from './Home-component/AchievementComponent'
+import WhatWeOffer from './Home-component/WhatweOffer'
+import Why from './Home-component/Why'
+import CertificationComponent from './Home-component/CertificationComponent'
 
-export default function Home() {
+
+const Home = () => {
   return (
-    <div><CarouselSection/></div>
+    <>
+      <HeroSec/>
+      <CountriesComponent/>
+      <AchievementComponent/>
+      <WhatWeOffer/>
+      <Why/>
+      <CertificationComponent/>
+    </>
   )
 }
+
+export default Home
