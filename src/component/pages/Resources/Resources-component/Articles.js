@@ -1,9 +1,13 @@
 import React from "react";
 import ArticalImg from "../../../../assets/Articles.png";
+import { useState } from "react";
+import ContactModal from "../../../common/Modal";
 
 const Articles = () => {
+   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
-    <div
+   <>
+     <div
       className="mt-12 md:mt-20 lg:mt-24 relative bg-gray-50 bg-cover bg-center w-full lg:min-h-[70vh] flex items-center px-4 py-6"
       style={{ backgroundImage: `url(${ArticalImg})` }}
     >
@@ -18,11 +22,17 @@ const Articles = () => {
           To find out how we can help you
         </p>
 
-        <button className="mt-3 bg-white text-blue-700 text-[7px] md:text-sm font-semibold py-1 px-3 rounded-full shadow-lg hover:bg-black hover:text-white transition duration-300">
+        <button  onClick={() => setIsModalOpen(true)}
+        className="mt-3 bg-white text-blue-700 text-[7px] md:text-sm font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-black hover:text-white transition duration-300">
           CONTACT US TODAY!
         </button>
       </div>
     </div>
+    <ContactModal
+                    isOpen={isModalOpen}
+                    onClose={() => setIsModalOpen(false)}
+                />
+   </>
   );
 };
 
