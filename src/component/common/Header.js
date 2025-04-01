@@ -166,7 +166,7 @@ const Header = () => {
             Community First Initiatives
           </a>
           <a
-            href="/resources"
+            href="/resource"
             className={` ${
               currentPath === "/resources" ?"bg-blue-700 text-white px-4 py-2 rounded-full" 
                  : "hover:bg-blue-700 hover:text-white hover:px-4 hover:py-2 hover:rounded-full"
@@ -311,7 +311,7 @@ const Header = () => {
               </a>
             </div>
             <div className="border-b border-gray-600 py-3">
-              <a href="/" className="text-lg flex justify-between">
+              <a href="/resource" className="text-lg flex justify-between">
                 Resources
               </a>
             </div>
