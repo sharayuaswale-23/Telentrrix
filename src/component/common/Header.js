@@ -115,19 +115,31 @@ const Header = () => {
                 href="#"
                 className="block px-4 py-3 border-b border-gray-400 hover:bg-gray-700"
               >
-                IT Solutions
+               Contingent Staffing Solutions
               </a>
               <a
                 href="#"
                 className="block px-4 py-3 border-b border-gray-400 hover:bg-gray-700"
               >
-                Consulting Services
+                Managed Services and Project Delivery
               </a>
               <a
                 href="#"
                 className="block px-4 py-3 border-b border-gray-400 hover:bg-gray-700"
               >
-                Project Management
+                Adobe Platform Services
+              </a>
+              <a
+                href="#"
+                className="block px-4 py-3 border-b border-gray-400 hover:bg-gray-700"
+              >
+               Diversity and Inclusion
+              </a>
+              <a
+                href="/casestudies"
+                className="block px-4 py-3 border-b border-gray-400 hover:bg-gray-700"
+              >
+               Case Studies
               </a>
             </div>
           </div>
@@ -165,14 +177,44 @@ const Header = () => {
             }`}          >
             Community First Initiatives
           </a>
-          <a
-            href="/resource"
-            className={` ${
-              currentPath === "/resources" ?"bg-blue-700 text-white px-4 py-2 rounded-full" 
+
+          <div className="relative group">
+            <a
+              href="/resource"
+              className={`flex items-center gap-1 ${
+              currentPath === "/resource" ?"bg-blue-700 text-white px-4 py-2 rounded-full" 
                  : "hover:bg-blue-700 hover:text-white hover:px-4 hover:py-2 hover:rounded-full"
-            }`}          >
-            Resources
-          </a>
+            }`}            >
+              Resources <FiChevronDown />
+            </a>
+            <div className="absolute left-0 mt-2 px-2 hidden group-hover:block bg-gray-700 text-white shadow-md rounded-md w-52">
+              <a
+                href="#"
+                className="block px-4 py-3 border-b border-gray-400 hover:bg-gray-700"
+              >
+               Articles
+              </a>
+              <a
+                href="#"
+                className="block px-4 py-3 border-b border-gray-400 hover:bg-gray-700"
+              >
+                Blogs
+              </a>
+              <a
+                href="#"
+                className="block px-4 py-3 border-b border-gray-400 hover:bg-gray-700"
+              >
+                FAQs
+              </a>
+              <a
+                href="#"
+                className="block px-4 py-3 border-b border-gray-400 hover:bg-gray-700"
+              >
+                Web Stories
+              </a>
+            </div>
+          </div>
+
           <a
             href="/contact"
             className={` ${
@@ -272,13 +314,19 @@ const Header = () => {
               {dropdowns.solutions && (
                 <div className="pl-4 mt-2">
                   <a href="#" className="block border-b border-gray-700 py-2">
-                    IT Solutions
+                  Contingent Staffing Solutions
                   </a>
                   <a href="#" className="block border-b border-gray-700 py-2">
-                    Consulting Services
+                  Managed Services and Project Delivery
                   </a>
-                  <a href="#" className="block py-2">
-                    Project Management
+                  <a href="#" className="block border-b border-gray-700 py-2">
+                  Adobe Platform Services
+                  </a>
+                  <a href="#" className="block border-b border-gray-700 py-2">
+                  Diversity and Inclusion
+                  </a>
+                  <a href="/casestudies" className="block py-2">
+                  Case Studies
                   </a>
                 </div>
               )}
@@ -310,11 +358,34 @@ const Header = () => {
                 Community First Initiatives
               </a>
             </div>
+
             <div className="border-b border-gray-600 py-3">
-              <a href="/resource" className="text-lg flex justify-between">
-                Resources
-              </a>
+            <a href="/resource">
+            <button
+                onClick={() => toggleDropdown("resource")}
+                className="text-lg flex justify-between w-full text-left"
+              >
+                Resources <FiChevronDown />
+              </button>
+            </a>
+              {dropdowns.resource && (
+                <div className="pl-4 mt-2">
+                  <a href="#" className="block border-b border-gray-700 py-2">
+                    Articles
+                  </a>
+                  <a href="#" className="block border-b border-gray-700 py-2">
+                    Blogs
+                  </a>
+                  <a href="#" className="block border-b border-gray-700 py-2">
+                    FAQs
+                  </a>
+                  <a href="#" className="block py-2">
+                   Web Stories
+                  </a>
+                </div>
+              )}
             </div>
+
             <div className="border-b border-gray-600 py-3">
               <a href="/contact" className="text-lg flex justify-between">
                 Contact Us
