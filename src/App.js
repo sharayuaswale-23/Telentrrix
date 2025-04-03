@@ -8,6 +8,7 @@ import OurSolution from './component/pages/solution/solution';
 import AboutUs from './component/pages/About/About';
 import Resources from './component/pages/Resources/Resources';
 import CaseStudies from './component/pages/solution/solutiondropdown/Case-studies/CaseStudy';
+import Awards from './component/pages/About/About-Dropdown/Awards/Awards';
 import Header from './component/common/Header';
 import Footer from './component/common/Footer';
 function App() {
@@ -23,6 +24,7 @@ function App() {
     <Route path='/about' element={<AboutUs/>}/>
     <Route path='/resource' element={<Resources/>}/>
     <Route path='/casestudies' element={<CaseStudies/>}/>
+    <Route path='/awards' element={<Awards/>}/>
    </Routes>
    <Footer/>
    </>

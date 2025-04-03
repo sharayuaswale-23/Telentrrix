@@ -87,7 +87,7 @@ const Header = () => {
                 Great Place to Work
               </a>
               <a
-                href="#"
+                href="/awards"
                 className="block px-4 py-3 border-b border-gray-400 hover:bg-gray-700"
               >
                 Awards
@@ -292,7 +292,7 @@ const Header = () => {
                   <a href="#" className="block border-b border-gray-700 py-2">
                     Great Place to Work
                   </a>
-                  <a href="#" className="block border-b border-gray-700 py-2">
+                  <a href="/awards" className="block border-b border-gray-700 py-2">
                     Awards
                   </a>
                   <a href="#" className="block py-2">
